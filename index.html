@@ -1,0 +1,631 @@
+<!-- 
+PALETTE: Vibrant Professional
+- Primary Dark: #1e293b (Slate 800)
+- Vibrant Blue: #3b82f6 (Blue 500)
+- Energetic Cyan: #06b6d4 (Cyan 500)
+- Alert Pink: #ec4899 (Pink 500)
+- Growth Green: #10b981 (Emerald 500)
+- Warning Orange: #f97316 (Orange 500)
+
+NARRATIVE PLAN:
+1. Introduction: The progress vs. the "Uncomfortable Truth".
+2. The Problem: "Credentials without Leverage". Visualized as a bar chart showing high skills but low strategic power leading to vulnerability.
+3. Global Context: Radar Chart comparing India-2025 vs. Global Leaders (USA, China, Germany) on axes like IP, R&D, and Supply Chain.
+4. The Demographic Challenge: Line chart projecting workforce growth vs. traditional job availability.
+5. Action Plan: HTML Cards (No SVG) detailing specific strategies for 10Cr, 100Cr, and Listed companies.
+6. The Philosophy: Donut chart comparing "Quarterly Profits" focus vs. "Stakeholder Leverage" focus.
+7. Timeline: Vertical CSS timeline from 2025 to 2035.
+8. Conclusion: The final question.
+
+CHART SELECTIONS:
+1. Bar Chart (Chart.js): The Layoff Paradox (High Skills vs Low Leverage). Goal: Inform/Contrast. NO SVG.
+2. Radar Chart (Chart.js): Global Leverage Benchmarks. Goal: Compare. NO SVG.
+3. Stacked Area Chart (Chart.js): Workforce vs AI Threat. Goal: Change/Trend. NO SVG.
+4. Doughnut Chart (Chart.js): Value Composition (Labor Arbitrage vs Premium Leverage). Goal: Composition. NO SVG.
+
+CONFIRMATION: NEITHER Mermaid JS NOR SVG were used anywhere in the output. Icons use Unicode/CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India 2026: The Strategic Inflection Point</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Max width constraint */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s;
+        }
+
+        .card-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(to right, #3b82f6, #06b6d4, #10b981);
+            margin: 2rem auto;
+            width: 50%;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-slate-800 tracking-tight">INDIA <span class="text-blue-600">2026</span></div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
+                <a href="#context" class="hover:text-blue-600 transition">The Context</a>
+                <a href="#benchmarks" class="hover:text-blue-600 transition">Benchmarks</a>
+                <a href="#strategy" class="hover:text-blue-600 transition">The Strategy</a>
+                <a href="#philosophy" class="hover:text-blue-600 transition">Philosophy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- Hero Section -->
+        <section id="context" class="text-center space-y-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
+                To Corporate Leaders:<br>
+                <span class="gradient-text">We Need to Talk About 2026</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed">
+                We've built something remarkable. But the playbook that got us here won't be sufficient for what's ahead. 
+                Investments, innovation, and jobs have transformed our economy, but an uncomfortable truth awaits.
+            </p>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- The Wake Up Call Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-slate-800 border-l-4 border-pink-500 pl-4">The Wake-Up Call</h2>
+                <p class="text-slate-600 text-lg">
+                    Remember the tech layoffs? Thousands of highly credentialed Indian engineers at Google, Microsoft, and Meta were let go. 
+                    They had the degrees. They had the certifications. <strong>What they lacked was leverage.</strong>
+                </p>
+                <p class="text-slate-600">
+                    When global markets optimize, areas without strategic positioning become 
+                    <span class="text-pink-600 font-semibold">cost centers to cut</span>, not capabilities to protect.
+                </p>
+                <div class="bg-pink-50 border border-pink-100 p-4 rounded-lg">
+                    <p class="text-pink-800 font-medium">"Credentials without leverage is just educated unemployment waiting to happen."</p>
+                </div>
+            </div>
+            
+            <!-- Visualization: The Credential Paradox -->
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold text-slate-700">The Credential Paradox</h3>
+                    <p class="text-sm text-slate-500">Why high skills didn't save jobs in the absence of strategic leverage.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="paradoxChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Benchmarks Section -->
+        <section id="benchmarks" class="bg-white rounded-2xl shadow-sm p-8 md:p-12 border border-slate-100">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">What Leverage Means Globally</h2>
+                <p class="text-slate-500 mt-2 max-w-2xl mx-auto">
+                    Top economies don't just participate; they dominate specific verticals. 
+                    We must move from "Cost Innovation" to "Strategic Indispensability".
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Radar Chart Container -->
+                <div class="flex flex-col justify-center">
+                    <div class="chart-container">
+                        <canvas id="leverageRadar"></canvas>
+                    </div>
+                    <p class="text-center text-xs text-slate-400 mt-4">Comparing India's current profile vs. Global Leaders & The 2026 Target</p>
+                </div>
+
+                <!-- Descriptive List -->
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl">&#127482;&#127480;</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-slate-800">USA</h4>
+                            <p class="text-slate-600 text-sm">Silicon Valley ecosystem density, DARPA-funded research commercialization.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-red-100 text-red-600 font-bold text-xl">&#127464;&#127475;</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-slate-800">China</h4>
+                            <p class="text-slate-600 text-sm">Shenzhen hardware speed, domestic standards setting (5G), supply chain integration.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-600 font-bold text-xl">&#127465;&#127466;</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-slate-800">Germany</h4>
+                            <p class="text-slate-600 text-sm">Apprenticeship systems, Fraunhofer R&D models, export financing.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 font-bold text-xl">&#127470;&#127475;</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-slate-800">India 2025 (Current)</h4>
+                            <p class="text-slate-600 text-sm">Global delivery, cost innovation, UPI, talent density. <span class="text-purple-600 font-semibold">Good, but vulnerable.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demographic Reality Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 bg-white p-6 rounded-xl card-shadow">
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold text-slate-700">The Race Against Time</h3>
+                    <p class="text-sm text-slate-500">Workforce growth vs. The "Labor Arbitrage" squeeze.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="demographicChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="order-1 md:order-2 space-y-6">
+                <h2 class="text-3xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">The Demographic Reality</h2>
+                <p class="text-slate-600 text-lg">
+                    We have the world's largest young workforce entering employment age. Unlike the outsourcing wave, today's graduates face AI displacement and reshoring.
+                </p>
+                <p class="text-slate-600">
+                    Labor arbitrage is a race to the bottom. As skills get commoditized, we must build capacity in the <strong>premium skills zone</strong>.
+                </p>
+                <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+                    <p class="text-orange-900 font-bold">Creating jobs isn't enough. We need to create leverage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Strategy Section (Cards) -->
+        <section id="strategy" class="space-y-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-slate-800">The 2026 Leverage Playbook</h2>
+                <p class="text-slate-500 mt-2">Strategic hard work scales to every business size.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl card-shadow overflow-hidden flex flex-col h-full border-t-4 border-blue-500">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-blue-500">Tier 1</span>
+                            <span class="text-xl font-bold text-slate-400">10 Cr</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Under 100 Employees</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <span class="mr-2 text-blue-500">&#10004;</span>
+                                Build proprietary standards for India-specific challenges.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 text-blue-500">&#10004;</span>
+                                Partner with institutes to co-design curricula (upstream talent).
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 text-blue-500">&#10004;</span>
+                                <strong>Export-First:</strong> Target Africa/SE Asia to build references & pricing power.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl card-shadow overflow-hidden flex flex-col h-full border-t-4 border-cyan-500">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-cyan-500">Tier 2</span>
+                            <span class="text-xl font-bold text-slate-400">100 Cr</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Under 1000 Employees</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <span class="mr-2 text-cyan-500">&#10004;</span>
+                                Train & finance 20-30 smaller vendors (Domestic Supply Chain).
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 text-cyan-500">&#10004;</span>
+                                <strong>R&D Consortiums:</strong> Pool resources with peers & IITs for Indian-owned tech.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 text-cyan-500">&#10004;</span>
+                                Talent exchange programs vs. migration.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl card-shadow overflow-hidden flex flex-col h-full border-t-4 border-indigo-500">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">Tier 3</span>
+                            <span class="text-xl font-bold text-slate-400">Listed</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-4">Large Cap / Conglomerates</h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start">
+                                <span class="mr-2 text-indigo-500">&#10004;</span>
+                                <strong>Institution Building:</strong> Like Jio Institute or Foundation training.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 text-indigo-500">&#10004;</span>
+                                Invest in capability building that outlasts business cycles.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2 text-indigo-500">&#10004;</span>
+                                Plan 10 years ahead.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="bg-slate-900 text-white rounded-3xl p-8 md:p-16 relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-600 opacity-20 blur-3xl"></div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-white">Shareholder vs. Stakeholder</h2>
+                    <p class="text-slate-300 mb-6 text-lg leading-relaxed">
+                        Leverage creates stakeholder improvement, one step at a time. Unlike EU peers who use state-backed safety nets to shift all at once, India must build incrementally.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="h-8 w-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mr-3 font-bold">1</span>
+                            <span>Build vendor ecosystems = Strengthen 30 businesses.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="h-8 w-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mr-3 font-bold">2</span>
+                            <span>Co-fund research = Create industry knowledge.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="h-8 w-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mr-3 font-bold">3</span>
+                            <span>Train talent = Build national capability.</span>
+                        </li>
+                    </ul>
+                    <p class="mt-8 text-sm text-slate-400 italic">"This is the VC model applied to national competitiveness."</p>
+                </div>
+                
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-center text-slate-300 font-medium mb-4">Composition of Value: The Shift</h3>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="philosophyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="max-w-4xl mx-auto">
+            <h2 class="text-center text-3xl font-bold text-slate-800 mb-12">The Trajectory</h2>
+            <div class="relative border-l-4 border-blue-200 ml-6 md:ml-auto md:mx-auto md:w-full space-y-12 pl-8 pb-4">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[43px] bg-blue-500 h-6 w-6 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-slate-700">2000-2024</h3>
+                    <p class="text-slate-500 font-medium">The Foundation Phase</p>
+                    <p class="mt-2 text-slate-600">Outsourcing, Cost Innovation, Digital Infrastructure (UPI), Job Creation.</p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[43px] bg-pink-500 h-8 w-8 rounded-full border-4 border-white -ml-1"></div>
+                    <h3 class="text-2xl font-bold text-pink-600">2026: Inflection Point</h3>
+                    <p class="text-slate-500 font-medium">The Strategic Shift</p>
+                    <p class="mt-2 text-slate-600">Collectively building strategic positioning. Making India indispensable in global value chains. Moving from arbitrage to leverage.</p>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[43px] bg-slate-300 h-6 w-6 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-slate-400">2035</h3>
+                    <p class="text-slate-400 font-medium">TBD</p>
+                    <p class="mt-2 text-slate-500 italic">Depends entirely on the leverage we build in 2026.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="text-center py-16 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-t-3xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">The Question for You</h2>
+            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                2026 is approaching. We have a choice: become indispensable or remain easy to deprioritize.
+            </p>
+            <div class="inline-block bg-white px-8 py-4 rounded-full shadow-lg border border-blue-100">
+                <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
+                    What leverage are you building?
+                </span>
+            </div>
+
+              <!-- License and Attribution Section -->
+<div class="mt-12 pt-8 border-t border-blue-200/50 text-slate-500 max-w-2xl mx-auto px-4">
+    <div class="flex flex-col items-center space-y-3 text-center">
+        <p class="text-xs leading-relaxed">
+            &copy; 2026 <strong>Anil Bahuman</strong>. 
+            This is a personal project and does not reflect the views or positions of any employer.
+        </p>
+        <div class="flex items-center space-y-0 space-x-2 bg-white/50 px-3 py-1.5 rounded-full border border-blue-100">
+            <span class="text-[10px] font-bold tracking-widest uppercase">License: CC BY 4.0</span>
+            <span class="text-slate-300">|</span>
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="text-[10px] hover:text-blue-600 underline transition">
+                View Deed
+            </a>
+        </div>
+        <p class="text-[10px] italic opacity-75">
+            You are free to share and adapt this material for any purpose, even commercially, provided you give appropriate credit.
+        </p>
+    </div>
+</div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Utility: Label Wrapping (16 char limit) ---
+        function formatLabel(label) {
+            if (typeof label !== 'string' || label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= 16) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Utility: Common Tooltip Configuration ---
+        const commonTooltip = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- Chart 1: The Credential Paradox (Bar) ---
+        const ctxParadox = document.getElementById('paradoxChart').getContext('2d');
+        const paradoxLabels = ['Technical Certifications', 'University Degrees', 'Global Leverage', 'Job Security'];
+        
+        new Chart(ctxParadox, {
+            type: 'bar',
+            data: {
+                labels: paradoxLabels.map(formatLabel),
+                datasets: [{
+                    label: 'Index Level (Conceptual)',
+                    data: [90, 85, 30, 40], // High credentials, low leverage/security
+                    backgroundColor: [
+                        '#3b82f6', // Blue
+                        '#06b6d4', // Cyan
+                        '#f97316', // Orange (Warning)
+                        '#ec4899'  // Pink (Alert)
+                    ],
+                    borderRadius: 6,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltip,
+                    title: {
+                        display: true,
+                        text: 'High Credentials ≠ High Security',
+                        font: { size: 14 }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { display: false },
+                        grid: { display: false }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- Chart 2: Global Leverage Radar ---
+        const ctxRadar = document.getElementById('leverageRadar').getContext('2d');
+        const radarLabels = ['R&D Ecosystem', 'Supply Chain Control', 'IP Creation', 'Quality Standards', 'Tech Transfer', 'Cost Efficiency'];
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: radarLabels.map(formatLabel),
+                datasets: [{
+                    label: 'India 2025 (Current)',
+                    data: [40, 50, 30, 60, 45, 95], // Strong in cost, weak in others
+                    borderColor: '#94a3b8', // Slate 400
+                    backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                    pointBackgroundColor: '#94a3b8',
+                }, {
+                    label: 'Global Leaders (Avg)',
+                    data: [90, 85, 90, 85, 90, 60], // Strong in strategic areas
+                    borderColor: '#3b82f6', // Blue
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    pointBackgroundColor: '#3b82f6',
+                }, {
+                    label: 'India 2026 Target',
+                    data: [65, 75, 60, 80, 70, 90], // Moving up while keeping cost advantage
+                    borderColor: '#ec4899', // Pink
+                    backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                    pointBackgroundColor: '#ec4899',
+                    borderDash: [5, 5]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: commonTooltip,
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#e2e8f0' },
+                        grid: { color: '#e2e8f0' },
+                        pointLabels: {
+                            font: { size: 11, weight: '600' },
+                            color: '#475569'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+        // --- Chart 3: Demographic Challenge (Line/Area) ---
+        const ctxDemo = document.getElementById('demographicChart').getContext('2d');
+        const demoLabels = ['2015', '2020', '2025', '2030', '2035'];
+
+        new Chart(ctxDemo, {
+            type: 'line',
+            data: {
+                labels: demoLabels,
+                datasets: [{
+                    label: 'Workforce Size',
+                    data: [40, 55, 75, 90, 100], // Rising
+                    borderColor: '#10b981', // Green
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Low-End Arbitrage Jobs',
+                    data: [40, 50, 55, 45, 30], // Plateauing and falling due to AI
+                    borderColor: '#f97316', // Orange
+                    borderDash: [5, 5],
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: commonTooltip,
+                    legend: { position: 'bottom' },
+                    title: {
+                        display: true,
+                        text: 'The Growing Gap: Workforce vs. Old Jobs',
+                        padding: { bottom: 20 }
+                    }
+                },
+                scales: {
+                    y: { display: false },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- Chart 4: Philosophy Composition (Donut) ---
+        const ctxPhilo = document.getElementById('philosophyChart').getContext('2d');
+        const philoLabels = ['Quarterly Profit Focus', 'Long-term Stakeholder Leverage'];
+
+        new Chart(ctxPhilo, {
+            type: 'doughnut',
+            data: {
+                labels: philoLabels.map(formatLabel),
+                datasets: [{
+                    data: [80, 20], // Current State
+                    backgroundColor: ['#334155', '#3b82f6'],
+                    borderWidth: 0
+                }, {
+                    data: [40, 60], // Target State
+                    backgroundColor: ['#475569', '#06b6d4'],
+                    borderWidth: 0,
+                    weight: 0.6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '40%',
+                plugins: {
+                    tooltip: commonTooltip,
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#cbd5e1' }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Inner: Today | Outer: 2026 Goal',
+                        color: '#94a3b8',
+                        position: 'top',
+                        padding: 10
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
